@@ -1,11 +1,10 @@
 import streamlit as st
 import subprocess
 import time
+import main
 
 def run_main_py(LINK, model):
-    cmd = ["python", "main.py", LINK, model]
-    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    process.wait()  # Wait for the process to finish
+    main()
 
 def display_video(video_path):
     video_file = open(video_path, 'rb')
